@@ -1,0 +1,110 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(130, 223, 94);
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.main-header {
+    background-image: url(https://pbs.twimg.com/media/FvEICJlWYBMZKxM?format=jpg&name=large);
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+    margin: 0 0 10px;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main-header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+ .slide-in-item {
+            opacity: 0;
+            transform: translateX(-100px); /* Mulai dari kiri */
+            animation: slideIn 1s ease-out forwards;
+            background-color: rgba(255, 255, 255, 0.26); /* Sedikit transparan */
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px); /* Efek blur pada background */
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+            text-align: left;
+        }
+
+        /* Menambahkan jeda untuk setiap item */
+        .slide-in-item:nth-child(1) { animation-delay: 0.3s; }
+        .slide-in-item:nth-child(2) { animation-delay: 0.6s; }
+        .slide-in-item:nth-child(3) { animation-delay: 0.9s; }
+        .slide-in-item:nth-child(4) { animation-delay: 1.2s; }
+        /* Anda bisa menambahkan lebih banyak nth-child sesuai jumlah item */
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        g {
+            color: #555;
+        }
+
+/* Footer */
+.main-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 786px) {
+    .main-header h1 {
+        font-size: 2.5em;
+    }
+
+    .main-header p {
+        font-size: 1em;
+    }
+
+    .file-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        padding: 40px 15px;
+    }
+    .main-header h1 {
+        font-size: 2em;
+    }
+}
